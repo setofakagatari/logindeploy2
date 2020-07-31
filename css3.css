@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.507);
+}
+body {
+    background-image: url(https://www.fondoswiki.com/Uploads/fondoswiki.com/Resoluciones/4058-1920x1080.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+.contenedor {
+    width: 100%;
+    
+    margin:auto;
+    
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:"header header header2"
+              
+                        "text text sidebar"
+                       
+                        
+                        "footer footer sidebar";
+    
+                        
+}
+
+.contenedor > div,
+
+.contenedor .header,
+
+.contenedor .text,
+
+.contenedor .sidebar,
+.contenedor .footer {
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.contenedor .header{
+    background-color: slateblue;
+    grid-area: header;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2em;
+}
+.contenedor .header2{
+    background-color:rgba(0, 0, 0, 0.349);
+    grid-area: header2;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2em;
+}
+
+.contenedor .text{
+    grid-area: text;
+    background-color: white;
+ 
+}
+
+
+
+.contenedor .sidebar {
+   background-color: rgba(0, 0, 0, 0.425);
+   
+        align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    grid-area: sidebar;
+    color: white;
+   
+  
+
+}
+
+.contenedor .footer {
+    background-color: slateblue;
+    padding: 2em;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+button.casillano {
+    background-color: rgb(36, 36, 36);
+    border-radius: 50px;
+    border: 3px solid #000000;
+    width: 10em;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    font-size: 10px;
+    
+}
+button.casillano:hover {
+    animation: casillano 1050ms infinite alternate;
+    border: 3px solid #CFA8F5;
+}
+@keyframes casillano {
+    0% {border-color: #92004D;}
+100% {border-color: #6A00A8;}}
+input.accion {
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 3px solid #000000;
+    width: 10em;
+    height: 30px;
+    color: black;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+@media only screen and (max-width:768px) {
+    .contenedor {
+        
+        grid-template-areas:"sidebar sidebar sidebar"
+                            "header header header"
+                            "header2 header2 header2"
+                            
+                            "text text text"
+                            "footer footer footer";
+    }
+   
+    p {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+    .contenedor.sidebar{
+        max-height: 3em;
+    }
+    
+    
+}

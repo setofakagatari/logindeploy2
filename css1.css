@@ -1,0 +1,130 @@
+a {
+    text-decoration: none;
+    color: ivory;
+}
+p{
+    font-size: 20px;
+    
+}
+a.notwhite{
+    color: #ffffff5d;
+}
+
+h1{
+    color: black;
+}
+
+body{
+    background-image: url(https://noticias.amv.com.ar/wp-content/uploads/Post-interior.png);
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contenedor{
+    width: 100%;
+    
+    margin:auto;
+    
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas:
+                        "nada login errMsg";
+}
+.contenedor .login{
+    background-color: rgba(105, 90, 205, 0.377);
+    grid-area: login;
+    color: black;
+    align-items: center;
+    align-items: center;
+   
+    text-align: center;
+    justify-content: center;
+    padding: 2em;
+    border-radius: 15%;
+   
+}
+.contenedor.nada{
+    grid-area: nada;
+    
+}
+.contenedor.errMsg{
+    grid-area: errMsg;
+    
+    
+}
+input.casillano {
+    background-color: rgb(36, 36, 36);
+    border-radius: 50px;
+    border: 3px solid #000000;
+    
+    padding: 1em 1em 1em 1em;
+    color: #ffffff;
+
+    
+}
+input.casillano:hover {
+    animation: casillano 1050ms infinite alternate;
+    border: 3px solid #CFA8F5;
+}
+button.casillano {
+    background-color: rgb(36, 36, 36);
+    border-radius: 50px;
+    border: 3px solid #000000;
+    
+    padding: 1em 1em 1em 1em;
+    color: #ffffff;
+
+    
+}
+button.casillano:hover {
+    animation: casillano 1050ms infinite alternate;
+    border: 3px solid #CFA8F5;
+}
+@keyframes casillano {
+    0% {border-color: #92004D;}
+100% {border-color: #6A00A8;}}
+input.accion {
+    background-color: black;
+    border-radius: 50px;
+    border: 3px solid #000000;
+    color: white;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;    
+}
+input.accion:hover {
+    animation: accion 1050ms infinite alternate;
+    border: 3px solid #CFA8F5;
+}
+@keyframes accion {
+    0% {border-color: #92004D;}
+100% {border-color: #6A00A8;}
+}
+@media only screen and (max-width:768px) {
+    .contenedor {
+        
+       
+        grid-template-areas:
+                            
+                            "login login login"
+                            ;
+    }
+    
+  
+    
+    p {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+   
+    
+    
+    
+}
